@@ -30,8 +30,8 @@ class AuthController {
         const { email, password } = req.body;
         try {
             const user = await User.findByEmail(email);
-            if (!user) {
-                return res.status(400).json({ message: "Invalid credentials." });
+            if (!user || !(await bcrypt.compare(password, user.password))) {
+                return res.status(401).json({ message: "Invalid credentials." });
             }
 
             const isMatch = await bcrypt.compare(password, user.password);
@@ -47,6 +47,7 @@ class AuthController {
 
             res.json({ token });
         } catch (error) {
+            console.error("Error trying to authenticate:", error);
             res.status(500).json({ message: "Error trying to authenticate.", error });
         }
     }
