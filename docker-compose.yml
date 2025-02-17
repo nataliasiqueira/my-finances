@@ -1,32 +1,50 @@
 version: '3.8'
 
 services:
-  backend:
+  node-api:
     build: .
+    container_name: my-finances-node
+    restart: always
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - mysql
     environment:
       - NODE_ENV=production
-      - DB_HOST=db
+      - DB_HOST=mysql
       - DB_USER=root
-      - DB_PASSWORD=SenhaSQL#3
-      - DB_NAME=finance_db
-    volumes:
-      - .:/app
-      - /app/node_modules
+      - DB_PASSWORD=root
+      - DB_NAME=finances
+      - JWT_SECRET=superSecret
+    command: sh -c "sleep 10 && node server.js"
 
-  db:
-    image: mysql:8
+  mysql:
+    image: mysql:8.0
+    container_name: my-finances-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: SenhaSQL#3
-      MYSQL_DATABASE: finance_db
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: finances
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+
+  flask-api:
+    build: ../my-finances-python/data/flask-api
+    container_name: my-finances-python
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: finances
 
 volumes:
   mysql_data:

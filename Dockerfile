@@ -1,19 +1,19 @@
 # Usa uma imagem oficial do Node.js como base
 FROM node:18
 
-# Define o diretório de trabalho dentro do container
+# Define o diretï¿½rio de trabalho dentro do container
 WORKDIR /app
 
-# Copia os arquivos package.json e package-lock.json para instalar as dependências
+# Copia os arquivos package.json e package-lock.json para instalar as dependï¿½ncias
 COPY package*.json ./
 
-# Instala as dependências
+# Instala as dependï¿½ncias
 RUN npm install
 
-# Copia o restante do código para dentro do container
+# Copia o restante do cï¿½digo para dentro do container
 COPY . .
 
-# Expõe a porta que o backend usará
+# Expï¿½e a porta que o backend usarï¿½
 EXPOSE 3000
 
 # Define o comando para rodar o backend
