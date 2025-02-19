@@ -18,3 +18,5 @@ EXPOSE 3000
 
 # Define o comando para rodar o backend
 CMD ["node", "server.js"]
+
+CMD npx sequelize-cli db:migrate && node server.js
