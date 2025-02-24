@@ -9,7 +9,7 @@ const router = express.Router();
 router.post(
     "/",
     authenticate,
-    authorize(["admin", "analista"]),
+    authorize(["admin", "analyst"]),
     [
         check("type", "Transaction type is mandatory (income or expense").isIn(["income", "expense"]),
         check("amount", "Amount is mandatory and must be a number").isFloat({ gt: 0 }),
@@ -18,8 +18,8 @@ router.post(
     TransactionController.create
 );
 
-router.get("/", authenticate, authorize(["admin", "analista"]), TransactionController.getAll);
-router.get("/:id", authenticate, authorize(["admin", "analista"]), TransactionController.getOne);
+router.get("/", authenticate, authorize(["admin", "analyst"]), TransactionController.getAll);
+router.get("/:id", authenticate, authorize(["admin", "analyst"]), TransactionController.getOne);
 router.delete("/:id", authenticate, authorize(["admin"]), TransactionController.delete);
 
 module.exports = router;

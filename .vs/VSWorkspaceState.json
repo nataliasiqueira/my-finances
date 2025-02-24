@@ -6,5 +6,6 @@
     "\\src\\middleware",
     "\\src\\routes"
   ],
+  "SelectedNode": "\\src\\controllers\\TransactionController.js",
   "PreviewInSolutionExplorer": false
 }
