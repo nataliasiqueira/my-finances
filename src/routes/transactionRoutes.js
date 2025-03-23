@@ -18,6 +18,8 @@ router.post(
     TransactionController.create
 );
 
+router.put("/:id", authenticate, authorize(["admin"]), TransactionController.updateCategory);
+router.put("/:id", authenticate, authorize(["admin"]), TransactionController.updateBankAndType);
 router.get("/", authenticate, authorize(["admin", "analyst"]), TransactionController.getAll);
 router.get("/:id", authenticate, authorize(["admin", "analyst"]), TransactionController.getOne);
 router.delete("/:id", authenticate, authorize(["admin"]), TransactionController.delete);

@@ -10,12 +10,43 @@ class TransactionController {
 
         const { type, amount, category, description, date } = req.body;
         try {
-            const transactiond = await Transaction.create(
+            const transaction = await Transaction.create(
                 req.user.id, type, amount, category, description, date
             );
-            res.status(201).json({ message: "Transaction created successfully!", transactiond });
+            res.status(201).json({ message: "Transaction created successfully!", transaction });
         } catch (error) {
             res.status(500).json({ message: "Error trying to create transaction.", error });
+        }
+    }
+
+    static async updateCategory(req, res) {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { category } = req.body;
+        const { id } = req.params;
+        try {
+            const transactionUpdate = await Transaction.updateCategory(category, id, req.user.id);
+            res.status(201).json({ message: "Transaction category updated successfully!", transactionUpdate });
+        } catch (error) {
+            res.status(500).json({ message: "Error trying to update transaction.", error });
+        }
+    }
+
+    static async updateBankAndType(req, res) {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+        const { bank, type } = req.body;
+        const { id } = req.params;
+        try {
+            const transactionUpdate = await Transaction.updateBankAndType(bank, type, id, req.user.id);
+            res.status(201).json({ message: "Transaction bank and type updated successfully!", transactionUpdate });
+        } catch (error) {
+            res.status(500).json({ message: "Error trying to update transaction.", error });
         }
     }
 

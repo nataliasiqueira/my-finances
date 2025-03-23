@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\migrations",
     "\\src",
     "\\src\\controllers",
-    "\\src\\middleware",
+    "\\src\\models",
     "\\src\\routes"
   ],
-  "SelectedNode": "\\src\\controllers\\TransactionController.js",
   "PreviewInSolutionExplorer": false
 }

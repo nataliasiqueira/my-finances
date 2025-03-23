@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\migrations\\20250223220151-create-transactions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:migrations\\20250223220151-create-transactions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\routes\\transactionRoutes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\routes\\transactionRoutes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\controllers\\TransactionController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\controllers\\TransactionController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\models\\TransactionModel.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\TransactionModel.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-01-31T14:38:03.469Z",
+              "Title": "20250223220151-create-transactions.js",
+              "DocumentMoniker": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\migrations\\20250223220151-create-transactions.js",
+              "RelativeDocumentMoniker": "migrations\\20250223220151-create-transactions.js",
+              "ToolTip": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\migrations\\20250223220151-create-transactions.js",
+              "RelativeToolTip": "migrations\\20250223220151-create-transactions.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-23T18:19:04.245Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TransactionModel.js",
+              "DocumentMoniker": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\models\\TransactionModel.js",
+              "RelativeDocumentMoniker": "src\\models\\TransactionModel.js",
+              "ToolTip": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\models\\TransactionModel.js",
+              "RelativeToolTip": "src\\models\\TransactionModel.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-22T02:49:36.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "transactionRoutes.js",
+              "DocumentMoniker": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\routes\\transactionRoutes.js",
+              "RelativeDocumentMoniker": "src\\routes\\transactionRoutes.js",
+              "ToolTip": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\routes\\transactionRoutes.js",
+              "RelativeToolTip": "src\\routes\\transactionRoutes.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-22T02:49:23.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransactionController.js",
+              "DocumentMoniker": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\controllers\\TransactionController.js",
+              "RelativeDocumentMoniker": "src\\controllers\\TransactionController.js",
+              "ToolTip": "C:\\Users\\nati_\\Documents\\Projetos\\my-finances\\src\\controllers\\TransactionController.js",
+              "RelativeToolTip": "src\\controllers\\TransactionController.js",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-09T15:24:22.635Z"
             }
           ]
         }

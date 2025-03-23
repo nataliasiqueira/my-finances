@@ -33,7 +33,7 @@ services:
       - mysql_data:/var/lib/mysql
 
   flask-api:
-    build: ../my-finances-python/data/flask-api
+    build: ../my-finances-python/data/flask-api/
     container_name: my-finances-python
     restart: always
     ports:
@@ -45,6 +45,8 @@ services:
       DB_USER: root
       DB_PASSWORD: root
       DB_NAME: finances
+    volumes:
+    - ./data:/data/flask-api/data  # Montagem do volume
 
 volumes:
   mysql_data:

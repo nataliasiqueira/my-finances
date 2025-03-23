@@ -24,6 +24,20 @@ class Transaction {
         return rows[0];
     }
 
+    static async updateCategory(category, id, userId) {
+        const [result] = await pool.query("UPDATE transactions SET category = ? WHERE id = ? AND user_id = ?",
+            [category, id, userId]
+        );
+        return result.affectedRows > 0;
+    }
+
+    static async updateBankAndType(bank, type, id, userId) {
+        const [result] = await pool.query("UPDATE transactions SET bank = ?, type = ? WHERE id = ? AND user_id = ?",
+            [bank, type, id, userId]
+        );
+        return result.affectedRows > 0;
+    }
+
     static async delete(userId, transactionId) {
         const [result] = await pool.query("DELETE FROM transactions WHERE id = ? AND user_id = ?",
             [transactionId, userId]
